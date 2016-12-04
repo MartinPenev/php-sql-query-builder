@@ -127,6 +127,13 @@ class Where
     {
         return \unserialize(\serialize($this));
     }
+    
+    /**
+     * @return QueryInterface
+     */
+    public function query() {
+        return $this->query;
+    }
 
     /**
      * @return bool
