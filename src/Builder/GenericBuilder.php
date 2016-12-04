@@ -192,8 +192,8 @@ class GenericBuilder implements BuilderInterface
         if ($skipStartDots) {
             foreach($result as $bindingKey => $binding) {
                 $keyIndex = substr($bindingKey, 1);
-                $bindings[$keyIndex] = $binding;
-                unset($bindings[$bindingKey]);
+                $result[$keyIndex] = $binding;
+                unset($result[$bindingKey]);
             }
         }
 
