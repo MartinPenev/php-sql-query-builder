@@ -260,4 +260,8 @@ class ColumnQuery
 
         return $this;
     }
+    
+    public function getBuilder() {
+        return $this->select->getBuilder();
+    }
 }
