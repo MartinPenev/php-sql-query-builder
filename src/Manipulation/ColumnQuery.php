@@ -264,4 +264,8 @@ class ColumnQuery
     public function getBuilder() {
         return $this->select->getBuilder();
     }
+    
+    public function getSelect() {
+        return $this->select;
+    }
 }
