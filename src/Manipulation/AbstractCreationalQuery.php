@@ -10,6 +10,8 @@
 
 namespace NilPortugues\Sql\QueryBuilder\Manipulation;
 
+use NilPortugues\Sql\QueryBuilder\Syntax\Table;
+
 /**
  * Class AbstractCreationalQuery.
  */
@@ -21,7 +23,7 @@ abstract class AbstractCreationalQuery extends AbstractBaseQuery
     protected $values = [];
 
     /**
-     * @param string $table
+     * @param string|array|Table $table
      * @param array  $values
      */
     public function __construct($table = null, array $values = null)

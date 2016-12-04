@@ -11,6 +11,7 @@
 namespace NilPortugues\Sql\QueryBuilder\Manipulation;
 
 use NilPortugues\Sql\QueryBuilder\Syntax\SyntaxFactory;
+use NilPortugues\Sql\QueryBuilder\Syntax\Table;
 use NilPortugues\Sql\QueryBuilder\Syntax\Where;
 
 /**
@@ -57,7 +58,7 @@ class JoinQuery
     }
 
     /**
-     * @param string $table
+     * @param string|array|Table $table
      *
      * @return $this
      */
@@ -69,7 +70,7 @@ class JoinQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns
@@ -82,7 +83,7 @@ class JoinQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns
@@ -147,7 +148,7 @@ class JoinQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns
@@ -162,7 +163,7 @@ class JoinQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns
@@ -175,7 +176,7 @@ class JoinQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns

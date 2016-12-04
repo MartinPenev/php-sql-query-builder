@@ -10,6 +10,8 @@
 
 namespace NilPortugues\Sql\QueryBuilder\Manipulation;
 
+use NilPortugues\Sql\QueryBuilder\Syntax\Table;
+
 /**
  * Class Delete.
  */
@@ -21,7 +23,7 @@ class Delete extends AbstractBaseQuery
     protected $limitStart;
 
     /**
-     * @param string $table
+     * @param string|array|Table $table
      */
     public function __construct($table = null)
     {

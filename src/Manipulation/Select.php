@@ -21,11 +21,6 @@ use NilPortugues\Sql\QueryBuilder\Syntax\OrderBy;
 class Select extends AbstractBaseQuery
 {
     /**
-     * @var Table
-     */
-    protected $table;
-
-    /**
      * @var array
      */
     protected $groupBy = [];
@@ -71,7 +66,7 @@ class Select extends AbstractBaseQuery
     protected $parentQuery;
 
     /**
-     * @param string $table
+     * @param string|array|Table $table
      * @param array  $columns
      */
     public function __construct($table = null, array $columns = null)
@@ -104,7 +99,7 @@ class Select extends AbstractBaseQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns
@@ -117,7 +112,7 @@ class Select extends AbstractBaseQuery
     }
 
     /**
-     * @param string   $table
+     * @param string|array|Table   $table
      * @param string   $selfColumn
      * @param string   $refColumn
      * @param string[] $columns

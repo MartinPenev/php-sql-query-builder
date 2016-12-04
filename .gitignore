@@ -2,3 +2,5 @@ build/
 vendor/
 bin/
 composer.lock
+*.xml
+.idea/php-sql-query-builder.iml
