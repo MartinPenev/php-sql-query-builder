@@ -181,12 +181,23 @@ class GenericBuilder implements BuilderInterface
         return QueryFactory::createMinus($first, $second);
     }
 
-    /**
-     * @return array
-     */
-    public function getValues()
+   /**
+    * @param bool $skipStartDots Removes ":" from keys of the returned array.
+    * @return array
+    */
+    public function getValues($skipStartDots = false)
     {
-        return $this->placeholderWriter->get();
+        $result = $this->placeholderWriter->get();
+
+        if ($skipStartDots) {
+            foreach($result as $bindingKey => $binding) {
+                $keyIndex = substr($bindingKey, 1);
+                $bindings[$keyIndex] = $binding;
+                unset($bindings[$bindingKey]);
+            }
+        }
+
+        return array_filter($result);
     }
 
     /**
